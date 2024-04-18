@@ -4,7 +4,7 @@ const port = 8080;
 const mongoose = require("mongoose");
 const routes = require("./routes/index");
 const bodyParser = require("body-parser");
-
+const cors = require("cors");
 const uri =
   "mongodb+srv://rajibstha059:Qi0iaZREBibW1NIT@cluster0.vljghmm.mongodb.net/";
 
@@ -28,6 +28,7 @@ db.once("open", function () {
 
 // run().catch(console.dir);
 
+app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
