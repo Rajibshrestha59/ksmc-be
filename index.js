@@ -5,8 +5,7 @@ const mongoose = require("mongoose");
 const routes = require("./routes/index");
 const bodyParser = require("body-parser");
 const cors = require("cors");
-const uri =
-  "mongodb+srv://rajibstha059:Qi0iaZREBibW1NIT@cluster0.vljghmm.mongodb.net/";
+const uri = "your_db_url";
 
 mongoose.connect(uri);
 const db = mongoose.connection;
